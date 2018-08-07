@@ -1,0 +1,44 @@
+
+$pure-button-min-width: 56px !default;
+$pure-button-margin: 0px !default;
+$pure-button-padding: 0 16px !default;
+$pure-button-line-height: 32px !default;
+$pure-button-font-size: 14px !default;
+$pure-button-font-weight: bold !default;
+$pure-button-color: rgba(0,0,0,.64) !default;
+
+.pure-button {
+  background-color: #d4d4d4;
+  text-align: center;
+  display: inline-block;
+  padding: 15px 40px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  outline: 0px;
+  color: $pure-button-color;
+  font-size: $pure-button-font-size;
+  font-weight: $pure-button-font-weight;
+  margin: $pure-button-margin;
+  padding: $pure-button-padding;
+  line-height: $pure-button-line-height;
+  min-width: $pure-button-min-width;
+}
+
+.pure-button:before {
+  content: "";
+  position: absolute;
+  height: calc(100%/2);
+  width: 100%;
+  background: #fff;
+  left: 0;
+  top: 0;
+  transition: all .3s;
+  opacity: 0.3;
+}
+
+.pure-button:hover:before {
+  top: 90%;
+}
