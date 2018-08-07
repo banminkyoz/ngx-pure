@@ -1,0 +1,22 @@
+@import '../../style/core';
+@import '../../theming/core';
+@import '../../theming/themes';
+
+@mixin pure-button-reset {
+  @include pure-default;
+
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 0px;
+  padding: 0 16px;
+  min-width: 56px;
+  border-radius: 2px;
+  @include pure-theme($themes) {
+    color: pure-color('textColor');
+    background-color: red;
+  }
+}

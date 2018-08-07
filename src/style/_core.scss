@@ -1,0 +1,7 @@
+@import 'layout';
+@import 'typography';
+
+@mixin pure-default {
+  @include pure-fill;
+  @include pure-typo;
+}
