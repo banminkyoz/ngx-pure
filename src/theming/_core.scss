@@ -1,0 +1,16 @@
+@import '../components/button/button-theme';
+
+@function generate-theme($primary, $warn, $accent, $foreground, $background) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    foreground: $foreground,
+    background: $background,
+  );
+}
+
+// Theming for all components
+@mixin pure-theme($theme) {
+  @include pure-button-theme($theme);
+}
