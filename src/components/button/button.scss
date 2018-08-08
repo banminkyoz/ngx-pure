@@ -1,21 +1,24 @@
 @import '../../styling/components/button';
 
-.pure-button {
+.pure-button, .pure-raised-button {
   @include pure-button-reset();
+  z-index: 1;
 }
 
-.pure-button:before {
-  content: "";
+.pure-button-overlay {
+  z-index: -1;
   position: absolute;
-  height: calc(100%/2);
+  height: 100%;
   width: 100%;
-  background: #fff;
+  // background: rgba(255,255,255,0.25);
+  background: linear-gradient(to bottom, transparent 0%, #e0e0e0 50%, #b1b1b1 51%, white 100%);
+  // background: linear-gradient(to bottom, transparent 0%, white 100%);
   left: 0;
   top: 0;
   transition: all .3s;
   opacity: 0.3;
 }
 
-.pure-button:hover:before {
-  top: 90%;
-}
+// .pure-button:hover:before {
+//   top: 90%;
+// }

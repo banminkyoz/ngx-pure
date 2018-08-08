@@ -1,40 +1,50 @@
 @mixin pure-button-theme($theme) {
-  $basic: map-get($theme, basic);
+  $default: map-get($theme, default);
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foceground);
 
-  .pure-button {
-    background: $primary;
-    color: get-text-color($primary);
-  }
+  // NORMAL
 
-  .pure-button[color=basic] {
-    background: $basic;
-    color: get-text-color($basic);
+  .pure-button, .pure-raised-button, .pure-raised-button[color=basic] {
+    background: $default;
+    color: get-text-color($default);
     border: 1px solid #d6d6d6;
     padding: 0px 16px;
   }
 
-  .pure-button[color=primary] {
+  .pure-button[color=primary], .pure-raised-button[color=primary] {
     background: $primary;
     color: get-text-color($primary);
+    border: none;
   }
 
-  .pure-button[color=warn] {
+  .pure-button[color=warn], .pure-raised-button[color=warn] {
     background: $warn;
     color: get-text-color($warn);
+    border: none;
   }
 
-  .pure-button[color=accent] {
+  .pure-button[color=accent], .pure-raised-button[color=warn] {
     background: $accent;
     color: get-text-color($accent);
+    border: none;
   }
 
-  .pure-button[disabled] {
+  // DISABLED
+  .pure-button[disabled], .pure-raised-button[disabled] {
     background: #bdbdbd;
     color: rgba(0,0,0,.24);
+    border: none;
+    box-shadow: none;
+  }
+
+  // RAISED
+  .pure-raised-button {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    -moz-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   }
 }

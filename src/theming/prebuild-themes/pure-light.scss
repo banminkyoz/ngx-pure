@@ -1,13 +1,13 @@
 @import '../core';
 
-$basic: #ffffff;
+$default: #ffffff;
 $primary: #007bff;
 $warn: #FF3D00;
 $accent:  #F50057;
 $foceground: rgba(0,0,0,.78);
 $background: #ffffff;
 
-$theme: generate-theme($basic, $primary, $warn, $accent, $foceground, $background);
+$theme: generate-theme($default, $primary, $warn, $accent, $foceground, $background);
 
 // Include all theme styles for the components.
 @include pure-theme($theme);

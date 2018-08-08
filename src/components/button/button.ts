@@ -3,6 +3,7 @@ import { PureComponent } from '../../class/component';
 
 const BUTTON_HOST_ATTRIBUTES = [
   'pure-button',
+  'pure-raised-button',
   'pure-button-round'
 ];
 
