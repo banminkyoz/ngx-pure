@@ -1,6 +1,4 @@
-@import '../../style/core';
-@import '../../theming/core';
-@import '../../theming/themes';
+@import '../core';
 
 @mixin pure-button-reset {
   @include pure-default;
@@ -15,8 +13,4 @@
   padding: 0 16px;
   min-width: 56px;
   border-radius: 2px;
-  @include pure-theme($themes) {
-    color: pure-color('textColor');
-    background-color: red;
-  }
 }
