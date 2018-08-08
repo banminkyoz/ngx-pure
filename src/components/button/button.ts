@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, ElementRef, Input } from '@angular/core';
 import { PureComponent } from '../../class/component';
 
 const BUTTON_HOST_ATTRIBUTES = [
@@ -7,21 +7,19 @@ const BUTTON_HOST_ATTRIBUTES = [
 ];
 
 @Component({
-  selector: `button[pure-button], button[pure-raised-button], button[pure-round-button]`,
+  selector: `button[pure-button], button[pure-raised-button], button[pure-round-button],
+             a[pure-button], a[pure-raised-button], a[pure-round-button]`,
   exportAs: 'pureButton',
-  host: {
-    '[disabled]': 'disabled || null'
-  },
   templateUrl: './button.html',
   styleUrls: ['./button.scss'],
-  inputs: ['disabled', 'color'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PureButton extends PureComponent implements OnInit {
 
-  readonly isRoundButton: boolean = this.hasHostAttribute('pure-round-button');
   readonly isIconButton: boolean = this.hasHostAttribute('pure-icon-button');
+
+  @Input() disabled = false;
 
   constructor(el: ElementRef) {
     super(el, BUTTON_HOST_ATTRIBUTES);

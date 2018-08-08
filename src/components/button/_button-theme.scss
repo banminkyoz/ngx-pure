@@ -1,12 +1,40 @@
 @mixin pure-button-theme($theme) {
+  $basic: map-get($theme, basic);
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
   $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
+  $foreground: map-get($theme, foceground);
 
   .pure-button {
     background: $primary;
-    color: $foreground;
+    color: get-text-color($primary);
+  }
+
+  .pure-button[color=basic] {
+    background: $basic;
+    color: get-text-color($basic);
+    border: 1px solid #d6d6d6;
+    padding: 0px 16px;
+  }
+
+  .pure-button[color=primary] {
+    background: $primary;
+    color: get-text-color($primary);
+  }
+
+  .pure-button[color=warn] {
+    background: $warn;
+    color: get-text-color($warn);
+  }
+
+  .pure-button[color=accent] {
+    background: $accent;
+    color: get-text-color($accent);
+  }
+
+  .pure-button[disabled] {
+    background: #bdbdbd;
+    color: rgba(0,0,0,.24);
   }
 }

@@ -1,7 +1,17 @@
 @import '../components/button/button-theme';
 
-@function generate-theme($primary, $warn, $accent, $foreground, $background) {
+// Theming for all components
+@mixin pure-theme($theme) {
+  @include pure-button-theme($theme);
+}
+
+// Theming functions
+$black-87-opacity: rgba(black, 0.87);
+$white-87-opacity: rgba(white, 0.87);
+
+@function generate-theme($basic, $primary, $warn, $accent, $foreground, $background) {
   @return (
+    basic: $basic,
     primary: $primary,
     accent: $accent,
     warn: $warn,
@@ -10,7 +20,10 @@
   );
 }
 
-// Theming for all components
-@mixin pure-theme($theme) {
-  @include pure-button-theme($theme);
+@function get-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $black-87-opacity; // Lighter backgorund, return dark color
+  } @else {
+    @return $white-87-opacity; // Darker background, return light color
+  }
 }

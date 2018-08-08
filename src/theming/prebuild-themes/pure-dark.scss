@@ -1,12 +1,13 @@
 @import '../core';
 
-$primary: rgb(59, 59, 59);
-$warn: rgb(214, 89, 89);
-$accent:  rgb(84, 216, 102);
-$foceground: rgba(0,0,0,.67);
-$background: black;
+$basic: rgb(71, 71, 71);
+$primary: rgb(45, 189, 50);
+$warn: #FF3D00;
+$accent:  rgb(55, 92, 110);
+$foceground: white;
+$background: #292929;
 
-$theme: generate-theme($primary, $warn, $accent, $foceground, $background);
+$theme: generate-theme($basic, $primary, $warn, $accent, $foceground, $background);
 
 // Include all theme styles for the components.
 @include pure-theme($theme);
