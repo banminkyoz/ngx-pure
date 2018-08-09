@@ -1,11 +1,11 @@
 @import '../../styling/components/button';
 
-.pure-button, .pure-raised-button {
+.pure-button, .pure-flat-button, .pure-raised-button, .pure-stroked-button {
   @include pure-button-reset();
   z-index: 1;
 }
 
-.pure-button-overlay {
+.pure-button-overlay :not(.pure-button) {
   z-index: -1;
   position: absolute;
   height: 100%;
