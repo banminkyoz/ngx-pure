@@ -1,20 +1,26 @@
 @import '../../styling/components/button';
-
-.pure-button, .pure-flat-button, .pure-raised-button, .pure-stroked-button {
+.pure-button,
+.pure-flat-button,
+.pure-raised-button,
+.pure-stroked-button {
   @include pure-button-reset();
   z-index: 1;
 }
 
-.pure-flat-button, .pure-raised-button, .pure-stroked-button {
-  .pure-button-overlay {
+.pure-flat-button,
+.pure-raised-button,
+.pure-stroked-button  {
+  &:after {
+    content: "";
     z-index: -1;
     position: absolute;
     height: 100%;
-    width: 100%; // background: rgba(255,255,255,0.25);
-    background: linear-gradient(to bottom, transparent 0%, #e0e0e0 50%, #b1b1b1 51%, white 100%); // background: linear-gradient(to bottom, transparent 0%, white 100%);
+    width: 100%;
     left: 0;
     top: 0;
+    border-radius: 2px;
     transition: all .3s;
     opacity: 0.3;
+    background: linear-gradient(to bottom, transparent 0%, #e0e0e0 50%, #b1b1b1 51%, white 100%); // background: linear-gradient(to bottom, transparent 0%, white 100%);
   }
 }

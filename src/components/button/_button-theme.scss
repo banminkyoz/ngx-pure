@@ -4,8 +4,7 @@
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
   $background: map-get($theme, background);
-  $foreground: map-get($theme, foceground);
-
+  $foreground: map-get($theme, foreground); 
   //////////////////////////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////            NORMAL           //////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,7 +27,37 @@
     color: $accent;
   }
   .pure-button[disabled] {
-    color: rgba(0,0,0,.24);
+    color: rgba(0, 0, 0, .24);
+    cursor: default;
+  } 
+  // HOVER EFFECTS
+  .pure-button:hover:after, .pure-button:focus:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%; 
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    opacity: .13;
+    background: $foreground;
+    color: get-text-color($foreground);
+  } 
+  .pure-button[color=primary]:hover:after, .pure-button[color=primary]:focus:after {
+    background: $primary; 
+    color: get-text-color($primary);
+  }
+  .pure-button[color=warn]:hover:after, .pure-button[color=warn]:focus:after {
+    background: $warn; 
+    color: get-text-color($warn);
+  }
+  .pure-button[color=accent]:hover:after, .pure-button[color=accent]:focus:after {
+    background: $accent; 
+    color: get-text-color($accent);
+  }
+  .pure-button[disabled]:hover:after {
+    background: none;
   }
   //////////////////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////            RAISED, FLAT             /////////////////////////////////
@@ -46,46 +75,50 @@
     padding: 0px 17px;
     border: none;
   }
-  .pure-flat-button[color], .pure-raised-button[color], .pure-flat-button[disabled], .pure-raised-button[disabled] {
+  .pure-flat-button[color],
+  .pure-raised-button[color],
+  .pure-flat-button[disabled],
+  .pure-raised-button[disabled] {
     border: none;
-    padding: 1px 16px;
+    padding: 0px 16px;
   }
-  .pure-flat-button[color=primary], .pure-raised-button[color=primary] {
+  .pure-flat-button[color=primary],
+  .pure-raised-button[color=primary] {
     background: $primary;
     color: get-text-color($primary);
   }
-  .pure-flat-button[color=warn], .pure-raised-button[color=warn] {
+  .pure-flat-button[color=warn],
+  .pure-raised-button[color=warn] {
     background: $warn;
     color: get-text-color($warn);
   }
-  .pure-flat-button[color=accent], .pure-raised-button[color=accent] {
+  .pure-flat-button[color=accent],
+  .pure-raised-button[color=accent] {
     background: $accent;
     color: get-text-color($accent);
-  }
-
-  // DISABLED
-  .pure-flat-button[disabled], .pure-raised-button[disabled] {
+  } // DISABLED
+  .pure-flat-button[disabled],
+  .pure-raised-button[disabled] {
     background: #bdbdbd;
-    color: rgba(0,0,0,.24);
+    color: rgba(0, 0, 0, .24);
     box-shadow: none;
-  }
-
+    cursor: default;
+  } 
   //////////////////////////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////            RAISED           //////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////
   .pure-raised-button {
-    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-    -moz-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-    -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-  }
-
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    -moz-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  } 
   //////////////////////////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////           STROKED           //////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////
   .pure-stroked-button {
     color: get-text-color($default);
     background: $background;
-    border: 1px solid get-text-color($default);
+    border: 1px solid rgba(get-text-color($default), .4);
     padding: 0 15.25px;
   }
   .pure-stroked-button[color=primary] {
@@ -101,7 +134,8 @@
     border-color: $accent;
   }
   .pure-stroked-button[disabled] {
-    color: rgba(get-text-color($background),.25);
+    color: rgba(get-text-color($background), .25);
     border-color: #d6d6d6;
+    cursor: default;
   }
 }

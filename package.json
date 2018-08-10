@@ -26,6 +26,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:local": "ng serve --host=0.0.0.0",
     "build:demo": "ng build --prod --build-optimizer",
     "build:themes": "gulp build-pure-themes",
     "build:lib": "rimraf dist && ng-packagr -p ng-package.json && gulp build-pure-themes",
