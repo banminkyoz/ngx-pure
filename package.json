@@ -28,7 +28,7 @@
     "start": "ng serve",
     "build:demo": "ng build --prod --build-optimizer",
     "build:themes": "gulp build-pure-themes",
-    "build:lib": "rimraf dist && ng-packagr -p ng-package.json",
+    "build:lib": "rimraf dist && ng-packagr -p ng-package.json && gulp build-pure-themes",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

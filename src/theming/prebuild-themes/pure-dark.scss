@@ -3,9 +3,9 @@
 $default: rgb(71, 71, 71);
 $primary: rgb(45, 189, 50);
 $warn: #FF3D00;
-$accent:  rgb(55, 92, 110);
-$foceground: white;
-$background: #292929;
+$accent:  #3199ce;
+$foceground: #ffffff;
+$background: #666666;
 
 $theme: generate-theme($default, $primary, $warn, $accent, $foceground, $background);
 

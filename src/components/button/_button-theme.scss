@@ -15,23 +15,18 @@
     padding: 1px 17px;
     border: none;
   }
-
   .pure-button[color] {
     padding: 1px 16px;
   }
-
   .pure-button[color=primary] {
     color: $primary;
   }
-
   .pure-button[color=warn] {
     color: $warn;
   }
-
   .pure-button[color=accent] {
     color: $accent;
   }
-
   .pure-button[disabled] {
     color: rgba(0,0,0,.24);
   }
@@ -45,29 +40,24 @@
     padding: 0px 17px;
     border: none;
   }
-
-  .pure-raised-button, .pure-raised-button {
+  .pure-raised-button {
     background: $default;
     color: get-text-color($default);
-    border: 1px solid #d6d6d6;
-    padding: 0px 16px;
+    padding: 0px 17px;
+    border: none;
   }
-
   .pure-flat-button[color], .pure-raised-button[color], .pure-flat-button[disabled], .pure-raised-button[disabled] {
     border: none;
     padding: 1px 16px;
   }
-
   .pure-flat-button[color=primary], .pure-raised-button[color=primary] {
     background: $primary;
     color: get-text-color($primary);
   }
-
   .pure-flat-button[color=warn], .pure-raised-button[color=warn] {
     background: $warn;
     color: get-text-color($warn);
   }
-
   .pure-flat-button[color=accent], .pure-raised-button[color=accent] {
     background: $accent;
     color: get-text-color($accent);
@@ -94,28 +84,24 @@
   //////////////////////////////////////////////////////////////////////////////////////////////////
   .pure-stroked-button {
     color: get-text-color($default);
-    background: white;
+    background: $background;
     border: 1px solid get-text-color($default);
     padding: 0 15.25px;
   }
-
   .pure-stroked-button[color=primary] {
     color: $primary;
     border-color: $primary;
   }
-
   .pure-stroked-button[color=warn] {
     color: $warn;
     border-color: $warn;
   }
-
   .pure-stroked-button[color=accent] {
     color: $accent;
     border-color: $accent;
   }
-
   .pure-stroked-button[disabled] {
-    color: rgba(0,0,0,.26);
+    color: rgba(get-text-color($background),.25);
     border-color: #d6d6d6;
   }
 }
