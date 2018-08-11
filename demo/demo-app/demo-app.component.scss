@@ -1,0 +1,35 @@
+.container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  header {
+    height: 56px;
+    padding: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3)
+  }
+  .left {
+    position: fixed;
+    box-sizing: border-box;
+    left: 0px;
+    width: 10%;
+    height: 100%;
+    -webkit-box-shadow: 1px 0px 2px 0px rgba(186, 186, 186, 1);
+    -moz-box-shadow: 1px 0px 2px 0px rgba(186, 186, 186, 1);
+    box-shadow: 1px 0px 2px 0px rgba(186, 186, 186, 1);
+    .menu-item {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  .right {
+    position: fixed;
+    box-sizing: border-box;
+    right: 0px;
+    width: 90%;
+    height: 100%;
+    padding: 32px;
+  }
+}

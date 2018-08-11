@@ -18,15 +18,11 @@ const BUTTON_HOST_ATTRIBUTES = [
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PureButton extends PureComponent implements OnInit {
+export class PureButton extends PureComponent {
 
   readonly isIconButton: boolean = this.hasHostAttribute('pure-icon-button');
-
-  @Input() disabled = false;
 
   constructor(el: ElementRef) {
     super(el, BUTTON_HOST_ATTRIBUTES);
   }
-
-  ngOnInit(): void { }
 }

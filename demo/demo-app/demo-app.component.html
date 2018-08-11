@@ -1,0 +1,12 @@
+<div dir="ltr" class="container">
+  <header pure-container>NGX-PURE DEMOS</header>
+  <div class="left">
+    <a class="menu-item" pure-button routerLink="{{item.route}}" *ngFor="let item of menuItems">
+      {{item.name}}
+    </a>
+  </div>
+  <div class="right">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

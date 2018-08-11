@@ -1,0 +1,15 @@
+@import '../../theming/functions';
+
+@mixin pure-text-theme($theme) {
+  .pure-text, .pure-text[color=primary] {
+    color: map-get($theme, primary);
+  }
+
+  .pure-text[color=warn] {
+    color: map-get($theme, warn);
+  }
+
+  .pure-text[color=accent] {
+    color: map-get($theme, accent);
+  }
+}

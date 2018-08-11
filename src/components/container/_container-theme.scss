@@ -1,0 +1,18 @@
+@import '../../theming/functions';
+
+@mixin pure-container-theme($theme) {
+  .pure-container, .pure-container[color=primary] {
+    color: get-text-color(map-get($theme, primary));
+    background: map-get($theme, primary);
+  }
+
+  .pure-container[color=warn] {
+    color: get-text-color(map-get($theme, warn));
+    background: map-get($theme, warn);
+  }
+
+  .pure-container[color=accent] {
+    color: get-text-color(map-get($theme, accent));
+    background: map-get($theme, accent);
+  }
+}

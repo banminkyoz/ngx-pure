@@ -1,3 +1,5 @@
+@import '../../theming/functions';
+
 @mixin pure-button-theme($theme) {
   $default: map-get($theme, default);
   $primary: map-get($theme, primary);
