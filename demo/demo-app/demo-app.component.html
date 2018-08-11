@@ -1,12 +1,16 @@
 <div dir="ltr" class="container">
-  <header pure-container>NGX-PURE DEMOS</header>
+  <header pure-container>
+    <span>NGX-PURE DEMOS</span>
+    <div style="flex-grow: 1"></div>
+    <button pure-button (click)="changeDirState()">{{dirState}}</button>
+    <button pure-button (click)="requestFullscreen()">Fullscreen</button>
+  </header>
   <div class="left">
     <a class="menu-item" pure-button routerLink="{{item.route}}" *ngFor="let item of menuItems">
       {{item.name}}
     </a>
   </div>
-  <div class="right">
+  <div id="demo" class="right">
     <router-outlet></router-outlet>
   </div>
 </div>
-
