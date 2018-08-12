@@ -12,6 +12,21 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
     display: flex;
     align-items: center;
+    position: relative;
+      &:after {
+        content: "";
+        z-index: 2;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 2px;
+        transition: all .3s;
+        opacity: 0.3;
+        background: linear-gradient(to bottom, transparent 0%, #e0e0e0 50%, #b1b1b1 51%, white 100%);
+        // background: linear-gradient(to bottom, transparent 0%, white 100%);
+      }
   }
   .left {
     position: fixed;
