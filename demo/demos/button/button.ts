@@ -1,10 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'button-demo',
   templateUrl: './button.html',
-  styleUrls: ['./button.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./button.scss']
 })
 export class ButtonDemo {
   constructor() { }

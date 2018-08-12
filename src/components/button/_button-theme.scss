@@ -68,13 +68,13 @@
   .pure-flat-button {
     background: $primary;
     color: get-text-color($primary);
-    padding: 0px 17px;
+    padding: 1px 17px;
     border: none;
   }
   .pure-raised-button {
     background: $default;
     color: get-text-color($default);
-    padding: 0px 17px;
+    padding: 1px 17px;
     border: none;
   }
   .pure-flat-button[color],
@@ -82,7 +82,7 @@
   .pure-flat-button[disabled],
   .pure-raised-button[disabled] {
     border: none;
-    padding: 0px 16px;
+    padding: 1px 16px;
   }
   .pure-flat-button[color=primary],
   .pure-raised-button[color=primary] {

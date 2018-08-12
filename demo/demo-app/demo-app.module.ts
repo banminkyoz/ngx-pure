@@ -7,10 +7,12 @@ import { DemoRoutingModule } from './demo-app.routing';
 import { PureButtonModule } from 'src/components/button/button.module';
 import { PureTextModule } from 'src/components/text/text.module';
 import { PureContainerModule } from 'src/components/container/container.module';
-import { RouterModule } from '../../node_modules/@angular/router';
+import { PureToolbarModule } from 'src/components/toolbar/toolbar.module';
+
 import { TextDemo } from '../demos/text/text';
 import { ContainerDemo } from '../demos/container/container';
 import { ButtonDemo } from '../demos/button/button';
+import { ToolbarDemo } from '../demos/toolbar/toolbar';
 
 @NgModule({
   declarations: [
@@ -18,15 +20,17 @@ import { ButtonDemo } from '../demos/button/button';
     // Demos
     ButtonDemo,
     ContainerDemo,
-    TextDemo
+    TextDemo,
+    ToolbarDemo
   ],
   imports: [
     BrowserModule,
     DemoRoutingModule,
-    // Components
+    // Component Modules
     PureButtonModule,
     PureContainerModule,
-    PureTextModule
+    PureTextModule,
+    PureToolbarModule
   ],
   providers: [],
   bootstrap: [DemoApp]

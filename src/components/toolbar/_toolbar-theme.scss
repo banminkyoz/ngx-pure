@@ -1,0 +1,35 @@
+@import '../../theming/functions';
+
+@mixin pure-toolbar-theme($theme) {
+  $primary: map-get($theme, primary);
+  $warn: map-get($theme, warn);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  .pure-toolbar,
+  .pure-header-toolbar,
+  .pure-footer-toolbar {
+    color: get-text-color($background);
+    background: $background;
+    border-top: 1px solid rgba($foreground, .1);
+    border-bottom: 1px solid rgba($foreground, .1);
+  }
+
+  .pure-toolbar[color=primary], 
+  .pure-header-toolbar[color=primary],
+  .pure-footer-toolbar[color=primary] {
+    color: get-text-color($primary);
+    background: $primary;
+  }
+
+  .pure-toolbar[color=warn] {
+    color: get-text-color($warn);
+    background: $warn;
+  }
+
+  .pure-toolbar[color=accent] {
+    color: get-text-color($accent);
+    background: $accent;
+  }
+}

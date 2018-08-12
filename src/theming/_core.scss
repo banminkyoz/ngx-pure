@@ -1,10 +1,12 @@
 @import '../components/button/button-theme';
 @import '../components/container/container-theme';
 @import '../components/text/text-theme';
+@import '../components/toolbar/toolbar-theme';
 
 // Theming for all components
 @mixin pure-theme($theme) {
   @include pure-button-theme($theme);
   @include pure-container-theme($theme);
   @include pure-text-theme($theme);
+  @include pure-toolbar-theme($theme);
 }

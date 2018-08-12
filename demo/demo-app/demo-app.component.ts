@@ -10,7 +10,8 @@ export class DemoApp {
   menuItems = [
     { name: 'Button', route: '/button' },
     { name: 'Container', route: '/container' },
-    { name: 'Text', route: '/text' }
+    { name: 'Text', route: '/text' },
+    { name: 'Toolbar', route: '/toolbar' }
   ];
 
   changeDirState() {
