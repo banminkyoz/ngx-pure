@@ -23,12 +23,16 @@
     background: $primary;
   }
 
-  .pure-toolbar[color=warn] {
+  .pure-toolbar[color=warn],
+  .pure-header-toolbar[color=warn],
+  .pure-footer-toolbar[color=warn] {
     color: get-text-color($warn);
     background: $warn;
   }
 
-  .pure-toolbar[color=accent] {
+  .pure-toolbar[color=accent],
+  .pure-header-toolbar[color=accent],
+  .pure-footer-toolbar[color=accent] {
     color: get-text-color($accent);
     background: $accent;
   }

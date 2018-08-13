@@ -8,7 +8,8 @@ pure-toolbar {
     color: rgba(0, 0, 0, .78);
     margin-bottom: 16px;
   }
-  button, a {
+  button,
+  a {
     margin: 4px;
   }
   .card {
@@ -17,16 +18,10 @@ pure-toolbar {
     height: 300px;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     border-radius: 4px;
-    .buttons {
-      position: absolute;
-      bottom: 16px;
-      left: 16px;
-      right: 16px;
-      .cancel-btn {
-        float: right;
-      }
-      .create-btn {
-        float: right;
+    .pure-footer-toolbar {
+      padding-right: 8px;
+      .spacer {
+        flex: 1 1 auto;
       }
     }
   }

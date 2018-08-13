@@ -1,12 +1,16 @@
-.examples-wrapper {
+.buttons-wrapper {
   margin: 16px;
+  button,
+  a {
+    margin: 4px;
+  }
   .title {
     color: rgba(0, 0, 0, .78);
     margin-bottom: 16px;
   }
-  button, a {
-    margin: 4px;
-  }
+}
+
+.examples-wrapper {
   .card {
     position: relative;
     margin-top: 20px;
@@ -14,15 +18,13 @@
     height: 200px;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     .buttons {
+      display: flex;
       position: absolute;
       bottom: 16px;
       left: 16px;
       right: 16px;
-      .cancel-btn {
-        float: right;
-      }
-      .create-btn {
-        float: right;
+      .spacer {
+        flex: 1 1 auto;
       }
     }
   }

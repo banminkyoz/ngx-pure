@@ -3,13 +3,14 @@
 .pure-toolbar, .pure-header-toolbar, .pure-footer-toolbar {
   display: flex;
   height: 56px;
-  align-items: center;
   padding: 0px 16px;
   box-sizing: border-box;
   position: relative;
-  z-index: -2;
+  z-index: 1;
   border-radius: inherit;
   align-items: center;
+  flex-direction: row;
+  white-space: nowrap;
   &:after {
     content: "";
     z-index: -1;
@@ -18,7 +19,6 @@
     width: 100%;
     left: 0;
     top: 0;
-    border-radius: 2px;
     transition: all .3s;
     opacity: 0.3;
     background: linear-gradient(to bottom, transparent 0%, #e0e0e0 50%, #b1b1b1 51%, white 100%);
@@ -26,15 +26,14 @@
   }
 }
 
-
 .pure-toolbar[color], .pure-header-toolbar[color], .pure-footer-toolbar[color] {
   border: none;
 }
 
 .pure-header-toolbar {
   border-top: none;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: initial;
+  border-bottom-right-radius: initial;
   position: absolute;
   top: 0px;
   left: 0px;

@@ -5,8 +5,7 @@
 .pure-raised-button,
 .pure-stroked-button {
   @include pure-default;
-  font-weight: bold;
-  z-index: 1;
+  z-index: 100;
   line-height: 32px;
   display: inline-block;
   position: relative;
@@ -30,7 +29,7 @@
 .pure-stroked-button  {
   &:after {
     content: "";
-    z-index: -1;
+    z-index: 99;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -40,6 +39,5 @@
     transition: all .3s;
     opacity: 0.3;
     background: linear-gradient(to bottom, transparent 0%, #e0e0e0 50%, #b1b1b1 51%, white 100%);
-    // background: linear-gradient(to bottom, transparent 0%, white 100%);
   }
 }

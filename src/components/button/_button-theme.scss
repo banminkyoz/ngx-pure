@@ -147,7 +147,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // If pure-button is inside container and don't have specific color.
 // It should get the suitable color with container background
-.pure-container {
+.pure-container, .pure-toolbar, .pure-header-toolbar, .pure-footer-toolbar {
   .pure-button {
     color: inherit !important;
   }
